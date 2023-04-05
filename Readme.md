@@ -53,9 +53,8 @@
      ```
      npm init
      ```
-    ```sh
       Make sure that you have already run npm init or have a node_modules folder or package.json file in the root of your project to  ensure cypress is installed in the correct directory.
-    ```
+
     Once done, run the command below to install Cypress.
 
      ```
@@ -76,9 +75,9 @@
  ### Direct download
   If you're not using Node or npm in your project or you want to try Cypress out quickly, you can always download Cypress directly from here **https://download.cypress.io/desktop**.
 
-  ```sh
+  
    Recording runs to Cypress Cloud is not possible from the direct download. This download is only intended as a quick way to try out Cypress. To record tests to Cypress Cloud, you'll need to install Cypress as an npm dependency.
-  ```
+  
   The direct download will always grab the latest available version. Your platform will be detected automatically.
   Then you can manually unzip and double click. Cypress will run without needing to install any dependencies.
 
@@ -104,7 +103,7 @@
 
 #### To use TypeScript with Cypress
 
-      To use TypeScript with Cypress, you will need TypeScript 3.4+. If you do not already have TypeScript installed as a part of your framework, you will need to install it:
+    To use TypeScript with Cypress, you will need TypeScript 3.4+. If you do not already have TypeScript installed as a part of your framework, you will need to install it:
 
   - Install Typescript Using the Below Command Typing in Terminal
 

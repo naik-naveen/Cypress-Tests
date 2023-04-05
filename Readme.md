@@ -103,7 +103,7 @@
 
 #### To use TypeScript with Cypress
 
-    To use TypeScript with Cypress, you will need TypeScript 3.4+. If you do not already have TypeScript installed as a part of your framework, you will need to install it:
+**To use TypeScript with Cypress, you will need TypeScript 3.4+. If you do not already have TypeScript installed as a part of your framework, you will need to install it**
 
   - Install Typescript Using the Below Command Typing in Terminal
 

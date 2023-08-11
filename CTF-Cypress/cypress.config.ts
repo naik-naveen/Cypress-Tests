@@ -19,8 +19,8 @@ export default defineConfig({
         on('task', verifyDownloadTasks);
     },
     env: {
-      "USERNAME": "naveen.naik@bitloka.com",
-      "PASSWORD": "Naveen@1947",
+      "USERNAME": "****",
+      "PASSWORD": "*****",
       "INCORRECT": "12568",
       "TRACKING ID": "1111",
       "TITLE": "Test",

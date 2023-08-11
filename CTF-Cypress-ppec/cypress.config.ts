@@ -18,8 +18,8 @@ export default defineConfig({
         on('task', verifyDownloadTasks);
     },
     env: {
-      "USERNAME": "ppec1@campustrack.net",
-      "PASSWORD": "ppec123",
+      "USERNAME": "****",
+      "PASSWORD": "****",
       "COURSE_NAME": "X",
       "AFFILIATION": "state",
       "course_Name": "I",

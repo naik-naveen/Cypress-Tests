@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-08-08T09:31:21.082Z",
+    "end": "2023-08-08T09:32:57.668Z",
+    "duration": 96586,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "caf55c47-6735-4b16-ab40-90ea5163f687",
+      "title": "",
+      "fullFile": "cypress\\e2e\\about.spec.cy.ts",
+      "file": "cypress\\e2e\\about.spec.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7e9742ae-2aff-46aa-ab7e-e97867295c3f",
+          "title": "About link Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should navigate to About page successfully and text vision shoiuld visible",
+              "fullTitle": "About link Test should navigate to About page successfully and text vision shoiuld visible",
+              "timedOut": null,
+              "duration": 39348,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress\\\\e2e\\\\about.spec.cy.ts\"\n}",
+              "code": "cy.visit(\"/\");\ncy.get('a[href=\"/ctng4/about\"]').click(); // Click the \"About\" link\ncy.url().should('include', '/about'); // Ensure that the URL now includes \"/about\ncy.contains('About').should('be.visible');\ncy.get('h5:contains(Vision)').should('be.visible');\ncy.contains('Provide a simple, powerful yet extensible platform for various stakeholders of an educational enterprise.').should('be.visible');\ncy.contains('Provide an ecosystem for teachers, students & parents to benefit as well as contribute.').should('be.visible');\ncy.contains('Managing academic and co-curricular activities.').should('be.visible');\ncy.contains('Education content creation in text, audio and video formats.').should('be.visible');\ncy.contains('Social Media tools (SMS, Email, Twitter and others) for information exchange ... in real time.').should('be.visible');\ncy.contains('Tools for Organizational Governance and resource management.').should('be.visible');\ncy.contains('Build a legacy for the students to carry beyond the boundaries of the institute (Alumni).').should('be.visible');\ncy.get('i[class=\"fa fa-arrow-right\"]').should('be.visible').should('exist');",
+              "err": {},
+              "uuid": "ac335932-d375-40b8-afa4-798051f416ed",
+              "parentUUID": "7e9742ae-2aff-46aa-ab7e-e97867295c3f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When user click on right arrow Organizational governance content should visible",
+              "fullTitle": "About link Test When user click on right arrow Organizational governance content should visible",
+              "timedOut": null,
+              "duration": 30429,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress\\\\e2e\\\\about.spec.cy.ts\"\n}",
+              "code": "cy.visit(\"/\");\ncy.get('a[href=\"/ctng4/about\"]').click(); // Click the \"About\" link\ncy.get('h5:contains(Vision)').prev().children().children().click();\n// cy.get('i[class=\"fa fa-arrow-right\"]').click()\ncy.get('h5:contains(Organizational governance)').should('be.visible');\ncy.contains('Regulatory Compliance').should('be.visible');\ncy.contains('Internal Reports').should('be.visible');\ncy.contains('External Reports - for board / department').should('be.visible');\ncy.contains('Analytics - Cross functional reports / Decision making tools').should('be.visible');\ncy.contains('Enterprise Resource Management').should('be.visible');\ncy.contains('Assets / Fees / Library - Physical & Digital').should('be.visible');\ncy.contains('People management (HR)').should('be.visible');\ncy.contains('Teaching / Non-teaching / Administrative Staff').should('be.visible');\ncy.contains('Payroll').should('be.visible');\ncy.contains('Multiple institutes under one Dashboard').should('be.visible');\ncy.contains('Schools - Pre-Primary / Primary / Secondary').should('be.visible');\ncy.contains('Colleges - Pre-University / Graduation / Post-graduation').should('be.visible');\ncy.contains('Trusts / Charitable Organizations').should('be.visible');\ncy.get('i[class=\"fa fa-arrow-left\"]').should('be.visible').should('exist');",
+              "err": {},
+              "uuid": "e726e028-47b4-424e-b7f9-8bfa51c85642",
+              "parentUUID": "7e9742ae-2aff-46aa-ab7e-e97867295c3f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": " Academics content should visible",
+              "fullTitle": "About link Test  Academics content should visible",
+              "timedOut": null,
+              "duration": 25057,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos\",\n  \"value\": \"cypress\\\\e2e\\\\about.spec.cy.ts\"\n}",
+              "code": "cy.visit(\"/\");\ncy.get('a[href=\"/ctng4/about\"]').click(); // Click the \"About\" link\ncy.get('h5:contains(Vision)').prev().children().children().click();\ncy.get('h5:contains(Organizational governance)').prev().children('span[class=\"pull-right\"]').children().children().click();\ncy.get('h5:contains(Academics)').should('be.visible');\ncy.contains('Student enrolment, promotions & issue of TC').should('be.visible');\ncy.contains('Student co-curricular activities').should('be.visible');\ncy.contains('Academic calendar, timetable & attendance').should('be.visible');\ncy.contains('Schedule exams & convey results').should('be.visible');\ncy.contains('Comparative analysis. Intra-institute & Inter-institute').should('be.visible');\ncy.get('i[class=\"fa fa-arrow-left\"]').should('be.visible').should('exist');",
+              "err": {},
+              "uuid": "ff255add-5db3-4e1c-b477-b6ea27952378",
+              "parentUUID": "7e9742ae-2aff-46aa-ab7e-e97867295c3f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ac335932-d375-40b8-afa4-798051f416ed",
+            "e726e028-47b4-424e-b7f9-8bfa51c85642",
+            "ff255add-5db3-4e1c-b477-b6ea27952378"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 94834,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "charts": true,
+        "reportPageTitle": "Campus Track Test Reporter-svc",
+        "inlineAssets": true,
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

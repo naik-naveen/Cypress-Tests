@@ -1,0 +1,52 @@
+describe('About link Test', () => {
+ 
+  it('should navigate to About page successfully and text vision shoiuld visible', () => {
+    cy.visit("/")
+    cy.get('a[href="/ctng4/about"]').click() // Click the "About" link
+    cy.url().should('include', '/about') // Ensure that the URL now includes "/about
+    cy.contains('About').should('be.visible')
+    cy.get('h5:contains(Vision)').should('be.visible')
+    cy.contains('Provide a simple, powerful yet extensible platform for various stakeholders of an educational enterprise.').should('be.visible')
+    cy.contains('Provide an ecosystem for teachers, students & parents to benefit as well as contribute.').should('be.visible')
+    cy.contains('Managing academic and co-curricular activities.').should('be.visible')
+    cy.contains('Education content creation in text, audio and video formats.').should('be.visible')
+    cy.contains('Social Media tools (SMS, Email, Twitter and others) for information exchange ... in real time.').should('be.visible')
+    cy.contains('Tools for Organizational Governance and resource management.').should('be.visible')
+    cy.contains('Build a legacy for the students to carry beyond the boundaries of the institute (Alumni).').should('be.visible')
+    cy.get('i[class="fa fa-arrow-right"]').should('be.visible').should('exist')
+  })
+  it('When user click on right arrow Organizational governance content should visible', () => {
+    cy.visit("/")
+    cy.get('a[href="/ctng4/about"]').click() // Click the "About" link
+    cy.get('h5:contains(Vision)').prev().children().children().click()
+   // cy.get('i[class="fa fa-arrow-right"]').click()
+    cy.get('h5:contains(Organizational governance)').should('be.visible')
+    cy.contains('Regulatory Compliance').should('be.visible')
+    cy.contains('Internal Reports').should('be.visible')
+    cy.contains('External Reports - for board / department').should('be.visible')
+    cy.contains('Analytics - Cross functional reports / Decision making tools').should('be.visible')
+    cy.contains('Enterprise Resource Management').should('be.visible')
+    cy.contains('Assets / Fees / Library - Physical & Digital').should('be.visible')
+    cy.contains('People management (HR)').should('be.visible')
+    cy.contains('Teaching / Non-teaching / Administrative Staff').should('be.visible')
+    cy.contains('Payroll').should('be.visible')
+    cy.contains('Multiple institutes under one Dashboard').should('be.visible')
+    cy.contains('Schools - Pre-Primary / Primary / Secondary').should('be.visible')
+    cy.contains('Colleges - Pre-University / Graduation / Post-graduation').should('be.visible')
+    cy.contains('Trusts / Charitable Organizations').should('be.visible')
+    cy.get('i[class="fa fa-arrow-left"]').should('be.visible').should('exist')
+  })
+  it(' Academics content should visible', () => {
+    cy.visit("/")
+    cy.get('a[href="/ctng4/about"]').click() // Click the "About" link
+    cy.get('h5:contains(Vision)').prev().children().children().click()
+    cy.get('h5:contains(Organizational governance)').prev().children('span[class="pull-right"]').children().children().click()
+    cy.get('h5:contains(Academics)').should('be.visible')
+    cy.contains('Student enrolment, promotions & issue of TC').should('be.visible')
+    cy.contains('Student co-curricular activities').should('be.visible')
+    cy.contains('Academic calendar, timetable & attendance').should('be.visible')
+    cy.contains('Schedule exams & convey results').should('be.visible')
+    cy.contains('Comparative analysis. Intra-institute & Inter-institute').should('be.visible')
+    cy.get('i[class="fa fa-arrow-left"]').should('be.visible').should('exist')
+  })
+})

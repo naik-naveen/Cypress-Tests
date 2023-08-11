@@ -1,0 +1,73 @@
+
+context('Nursery feature test', () => {
+    beforeEach(() => {
+        cy.visit('/')
+    })
+    it('When User click on Nursery link should navigate to Nursery page ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery')
+        cy.get('ul').should('be.visible')
+        const expectedTexts = ["Our Philosophy", "A Day At School", "Cultural Events", "Competitions", "Technology", "Assessments"]
+        cy.get("ul.dropdown-menu.sub-menu.show li").each((liElement, index) => {
+            const liText = liElement.text().trim()
+            expect(liText).to.equal(expectedTexts[index])
+        })
+        cy.contains('div', ' © 2023 V.V.S.G.C School. All Rights Reserved').should('be.visible')
+        cy.contains('h4', 'Our Philosophy').should('be.visible')
+            .next('h4').should('have.text', 'Curriculum development is the main motto.').should('be.visible')
+            .next('p').should('have.text', 'Innovations are encouraged for effective relationship between teaching and learning, to help imbibe different perspectives within each subject area. Students become participants in learning, and their learning becomes linked to their life outside the school.').should('be.visible')
+            .next('p').should('have.text', 'Children settle down in the new environment, perfect their co-ordination, gradually improve their concentration and exhibit incredible creativity.').should('be.visible')
+            .next('p').should('have.text', 'Students are encouraged to actively participate in various activities.').should('be.visible')
+    })
+    it('When User click on Our Philosophy link , should navigte to Our Philosophy page ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.get('a[href="/nursery/ourPhilosophy"]').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery/ourPhilosophy')
+        cy.contains('h4', 'Our Philosophy').should('be.visible')
+            .next('h4').should('have.text', 'Curriculum development is the main motto.').should('be.visible')
+            .next('p').should('have.text', 'Innovations are encouraged for effective relationship between teaching and learning, to help imbibe different perspectives within each subject area. Students become participants in learning, and their learning becomes linked to their life outside the school.').should('be.visible')
+            .next('p').should('have.text', 'Children settle down in the new environment, perfect their co-ordination, gradually improve their concentration and exhibit incredible creativity.').should('be.visible')
+            .next('p').should('have.text', 'Students are encouraged to actively participate in various activities.').should('be.visible')
+    })
+    it('When User click on A Day At School link , should navigte to A Day At School page ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.get('a[href="/nursery/dayAtSchool"]').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery/dayAtSchool')
+        cy.contains('h4', 'A Day At School').should('be.visible')
+        .next('p').should('have.text','Games are correlated to the classroom concepts like counting, recognizing odd and even numbers, shapes, colours etc, to develop motor skills, auditory- visual discrimination, eye-hand co-ordination, one-to-one interaction and logical thinking.').should('be.visible')
+        cy.contains('h4', 'Organized Games – Outdoor games').should('be.visible')
+        cy.contains('h4', 'Organized Games – Indoor games').should('be.visible')
+    })
+    it('When User click on Cultural Events link , should navigte to Cultural Events page ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.get('a[href="/nursery/culturalEvents"]').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery/culturalEvents')
+        cy.contains('h4', 'Celebration of National festivals').should('be.visible')
+        cy.contains('h4', 'Children’s Day Celebrations - A platform to showcase the hidden talent.').should('be.visible')
+        cy.contains('h4', 'World Reading Day being observed "Today a reader, tomorrow a leader…"').should('be.visible')
+        cy.contains('h4', 'Developing cultural awarenes - BhagavadGita and Shloka Chanting by all the students').should('be.visible')
+    })
+    it('When User click on Competitions link , should navigte to Competitions page ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.get('a[href="/nursery/competitions"]').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery/competitions')
+        cy.contains('h4', 'Sports Day').should('be.visible')
+        cy.contains('h4', 'Literary Competitions and prize distribution').should('be.visible')
+            .next('p').should('have.text', 'Various competitions like Shloka recitation, Story narration, Word building, Memory test, ‘Show and tell’ etc., are conducted to overcome stage fear and develop healthy competitive spirit among children.').should('be.visible')
+    })
+    it('When User click on Technology link , should navigte to Technologypage ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.get('a[href="/nursery/technology"]').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery/technology')
+        cy.contains('h4', 'Use of Technology').should('be.visible')
+            .next('p').should('have.text', 'Technology is used extensively in the teaching learning process. This is a fun filled session of interactive learning.').should('be.visible')
+    })
+    it('When User click on Assessments link , should navigte to Assessments page ', () => {
+        cy.get('a[href="/nursery"]').first().click()
+        cy.get('a[href="/nursery/assessments"]').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/nursery/assessments')
+        cy.contains('h4', 'Assessments').should('be.visible')
+            .next('p').should('have.text', 'Children are subjected to monthly reviews based on the topics covered during the course of the month. A comprehensive evaluation is presented to the parent. By the end of the year, these monthly reviews help in judging the overall performance of the child.').should('be.visible')
+    })
+
+})
